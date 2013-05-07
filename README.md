@@ -1,4 +1,4 @@
-# jQuery Plugin .stripe( options ) [Demo](http://fliptopbox.com/demo/slice/)
+# jQuery Plugin .stripe( options ) [Demo](http://fliptopbox.com/demo/stripe/)
     @version  : 1.0
     @author   : Bruce Thomas
     @requires : jQuery Core 1.7+
