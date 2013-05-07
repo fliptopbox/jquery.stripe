@@ -1,16 +1,10 @@
-body {
-  font-family: sans-serif;
-  font-size: 14px;
-  margin: 20px 0;
-}
-.pg {
-  width: 1024px;
-  margin:0 auto;
-}
-.gallery {
-  position: relative;
-  padding: 0 0 30px 0;
-}
+/**
+
+	jQuery Plugin .stripe( [options] )
+	@author   : Bruce Thomas
+	@github   : https://github.com/fliptopbox/jquery.slice/
+
+*/
 .stripe {
   background: transparent;
   width: 100%;
@@ -79,12 +73,13 @@ body {
   text-decoration: none;
   color: #fff;
 }
-.stripe-control .button.next { right:0; }
-.stripe-control .button.previous { left: 0;}
+.stripe-control .button.next {
+  right: 0;
+}
+.stripe-control .button.previous {
+  left: 0;
+}
 .stripe-control .button span {
   padding: 12px 0 0 0;
   display: block;
-}
-.stripe-control .button:hover {
-  opacity: 1;
 }

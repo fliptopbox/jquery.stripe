@@ -3,13 +3,11 @@
 
 /**
 
-	jQuery Plugin .iframe( [handle [, options [, callback]]] )
-	@version  : 1.0
+	jQuery Plugin .stripe( [options] )
+	@version  : 1.0.1
 	@author   : Bruce Thomas
 	@requires : jQuery Core 1.7+
 	@github   : https://github.com/fliptopbox/jquery.slice/
-
-	Purpose:
 
 
 */

@@ -1,6 +1,6 @@
 /**
 	jQuery Plugin .stripe( options )
-	@version  : 1.0.3
+	@version  : 1.0.1
 	@author   : Bruce Thomas
 	@requires : jquery>=1.7.1
 	@github   : https://github.com/fliptopbox/jquery.stripe
@@ -9,13 +9,11 @@
 
 /**
 
-	jQuery Plugin .iframe( [handle [, options [, callback]]] )
-	@version  : 1.0
+	jQuery Plugin .stripe( [options] )
+	@version  : 1.0.1
 	@author   : Bruce Thomas
 	@requires : jQuery Core 1.7+
-	@github   : https://github.com/fliptopbox/jquery.iframe/
-
-	Purpose:
+	@github   : https://github.com/fliptopbox/jquery.slice/
 
 
 */
