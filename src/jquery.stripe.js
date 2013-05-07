@@ -7,7 +7,7 @@
 	@version  : 1.0.1
 	@author   : Bruce Thomas
 	@requires : jQuery Core 1.7+
-	@github   : https://github.com/fliptopbox/jquery.slice/
+	@github   : https://github.com/fliptopbox/jquery.stripe/
 
 
 */
