@@ -1,0 +1,146 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<link rel="stylesheet" href="stripe.css">
+	<style>
+		h2 { display: inline-block; }
+		table th { background: #000; color:#fff; text-align: left; }
+		table tr td, table tr th {
+			padding: 5px 20px 5px 5px;
+		}
+	</style>
+</head>
+<body>
+	<div class="pg">
+		<h1>
+			<a href="http://fliptopbox.com/">fliptopbox</a> /
+			<a href="https://github.com/fliptopbox/jquery.stripe">jquery.stripe</a>
+		</h1>
+
+		<p>
+			A jQuery plug-in to create a cool striped gallery object.
+		</p>
+
+		<div class="intro">
+			<h2>$('.gallery').stripe();</h2>
+			<p>
+				You have a gallery of images, and you are tired of the same old gallery plug-ins,
+				you want something that reminds you of a shredder, well that is this.
+			</p>
+
+			<p>
+				<strong>Things to note:</strong> The height of the gallery is
+				determined by the height of the smallest image. The images are proportionately
+				down scaled to fit, and preserve image quality. You can use a combination
+				of portrait and landscape images. Navigation buttons, and auto animate settings
+				are available, see OPTIONS below. The auto-animation timer is paused if you hover
+				over the gallery or the navigation buttons, and reactivated onMouseout. There is
+				a calculated maximum image width to ensure an image doesn't consume the entire width
+				of the gallery, this width depends on the number of images, and the 'min-width' option.
+			</p>
+		</div>
+
+		<div class="gallery">
+			<ul>
+				<li><img src="img/1-000115.jpg" alt="Thailand - the reclining buddah"></li>
+				<li><img src="img/1-000792.jpg" alt="Underwater - me and mates enjoying the summer in Melgar"></li>
+				<li><img src="img/1-000825.jpg" alt="Denmark - A spinning suspended carousel in Trivoli"></li>
+				<li><img src="img/1-002264.jpg" alt="Passage way - I can not remember where this is"></li>
+				<li><img src="img/1-002706.jpg" alt="Fire juggling - Slow exposure of a fire show on the beach in Phi Phi"></li>
+				<li><img src="img/1-002843.jpg" alt="Mandala - Incredible intricate carving on clay."></li>
+				<li><img src="img/1-003137.jpg" alt="Shoreditch - A woven wire fence of a take away restaurant"></li>
+				<li><img src="img/1-003429.jpg" alt="Bookshelf - A funky restaurant up in Clapton, Hackney"></li>
+				<li><img src="img/1-003473.jpg" alt="Barcelona - Massive apartment block, like pigeon holes"></li>
+				<li><img src="img/3-000010.jpg" alt="Coal cover - Close-up of an old coal cover on the pavement"></li>
+				<li><img src="img/1-000115.jpg" alt="Thailand - the reclining buddah"></li>
+				<li><img src="img/1-000792.jpg" alt="Underwater - me and mates enjoying the summer in Melgar"></li>
+				<li><img src="img/1-000825.jpg" alt="Denmark - A spinning suspended carousel in Trivoli"></li>
+				<li><img src="img/1-002264.jpg" alt="Passage way - I can not remember where this is"></li>
+				<li><img src="img/1-002706.jpg" alt="Fire juggling - Slow exposure of a fire show on the beach in Phi Phi"></li>
+				<li><img src="img/1-002843.jpg" alt="Mandala - Incredible intricate carving on clay."></li>
+				<li><img src="img/1-003137.jpg" alt="Shoreditch - A woven wire fence of a take away restaurant"></li>
+				<li><img src="img/1-003429.jpg" alt="Bookshelf - A funky restaurant up in Clapton, Hackney"></li>
+				<li><img src="img/1-003473.jpg" alt="Barcelona - Massive apartment block, like pigeon holes"></li>
+				<li><img src="img/3-000010.jpg" alt="Coal cover - Close-up of an old coal cover on the pavement"></li>
+			</ul>
+		</div>
+		<p>(Photography provided courtesy of Bruce Thomas. All rights reserved.)</p>
+
+		<h2>Options</h2>
+		<p><strong>For example:</strong> $('.gallery').stripe({ 'automatic': true, 'buttons': true, 'delay': 5000, 'min-width': 20 });</p>
+		<!-- oh my god he has used a table - shameful! -->
+		<table width="100%">
+			<tr>
+				<th>key</th>
+				<th>type</th>
+				<th>default</th>
+				<th>description</th>
+			</tr>
+			<tr>
+				<td>ms</td>
+				<td>number</td>
+				<td>750</td>
+				<td>millisecond delay for animation speed</td>
+			</tr>
+			<tr>
+				<td>delay</td>
+				<td>number</td>
+				<td>5000 (5 seconds as milliseconds)</td>
+				<td>millisecond delay for "automatic animate" mode</td>
+			</tr>
+			<tr>
+				<td>automatic</td>
+				<td>boolean</td>
+				<td>false</td>
+				<td>activate the auto animate time interval</td>
+			</tr>
+			<tr>
+				<td>min-width</td>
+				<td>number</td>
+				<td>10px</td>
+				<td>the smallest width of the collapsed slices</td>
+			</tr>
+			<tr>
+				<td>buttons</td>
+				<td>boolean</td>
+				<td>false</td>
+				<td>do you want next/previous button navigation</td>
+			</tr>
+		</table>
+
+		<p>
+			This is a proof of concept plug-in, please jump right in and fork it on GITHUB.
+			It could do with some callback methods, better handling of the alt text presentation,
+			auto-animate sequentially option, and other nice stuff. If you want to see
+			this plug-in in action you can <a href="http://disintegrate.us/">find it here</a>.
+		</p>
+
+	</div>
+
+
+
+<script type="text/javascript" src="jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="jquery.stripe.min.js"></script>
+<script type="text/javascript">
+	$(function(){
+		$('.gallery').stripe({
+			'automatic': true,
+			'buttons': true,
+			'delay': 5000,
+			'min-width': 20
+		});
+	});
+</script>
+
+
+<!-- Google Analytics -->
+<script>
+	// var _gaq=[['_setAccount','UA-737441-2'],['_trackPageview']];
+	// (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+	// g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+	// s.parentNode.insertBefore(g,s)}(document,'script'));
+</script>
+</body>
+</html>
