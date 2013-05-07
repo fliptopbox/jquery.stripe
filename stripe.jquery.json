@@ -1,6 +1,6 @@
 {
 	"name": "stripe",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"title": "jQuery Stripe Plugin",
 	"description": "A jQuery plug-in to create a cool striped gallery object.",
 	"demo": "http://fliptopbox.com/demo/stripe/",
@@ -9,10 +9,12 @@
 		"url": "https://github.com/fliptopbox/jquery.stripe.git"
 	},
 	"keywords": [
-		"plugin",
-		"balace",
-		"equalize",
-		"stripe"
+		"stripe",
+		"image",
+		"gallery",
+		"striped gallery",
+		"venetian blinds",
+		"fliptopbox"
 	],
 	"author": {
 		"name": "FlipTopBox",
