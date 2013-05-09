@@ -49,25 +49,6 @@ module.exports = function(grunt) {
 					}
 				]
 			}
-		},
-		concat: {
-			options: {
-				stripBanners: true,
-				banner: [
-					'/**',
-					'	jQuery Plugin .stripe( options )',
-					'	@version  : <%= pkg.version %>',
-					'	@author   : Bruce Thomas',
-					'	@requires : jquery<%= pkg.dependencies.jquery %>',
-					'	@github   : <%= pkg.docs %>',
-					'*/',
-					''
-				].join('\n')
-			},
-			dist: {
-				src: 'dist/jquery.<%= pkg.name %>.js',
-				dest: 'dist/jquery.<%= pkg.name %>.js'
-			}
 		}
 	});
 
@@ -77,11 +58,9 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-clean');
 	grunt.loadNpmTasks('grunt-contrib-copy');
 	grunt.loadNpmTasks('grunt-contrib-jshint');
-	grunt.loadNpmTasks('grunt-contrib-concat');
 	grunt.loadNpmTasks('grunt-contrib-uglify');
 
 	// Default task(s).
 	grunt.registerTask('default', ['jshint','clean','copy','uglify']);
-	//grunt.registerTask('default', ['copy', 'concat','uglify']);
 
 };
