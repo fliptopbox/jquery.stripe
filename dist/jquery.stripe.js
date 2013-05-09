@@ -1,10 +1,3 @@
-/**
-	jQuery Plugin .stripe( options )
-	@version  : 1.0.1
-	@author   : Bruce Thomas
-	@requires : jquery>=1.7.1
-	@github   : https://github.com/fliptopbox/jquery.stripe
-*/
 /*global window, document, console, $, jQuery, undefined */
 
 /**
