@@ -1,4 +1,3 @@
-/*jslint bitwise: true, eqeq: true, passfail: false, nomen: true, sloppy: true, plusplus: false, undef: true, evil: true */
 /*global window, document, console, $, jQuery, undefined */
 
 /**
