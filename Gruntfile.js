@@ -3,15 +3,12 @@ module.exports = function(grunt) {
 	// Project configuration.
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('stripe.jquery.json'),
-		/*jshint: {
-			all: ['src/*.js'],
+		jshint: {
+			all: ['src/*.js', '!src/jquery-1.7.1.min.js'],
 			options: {
 				browser: true,
 				bitwise: true,
 				eqeqeq: true,
-				passfail: false,
-				nomen: false,
-				plusplus: false,
 				undef: true,
 				evil: true,
 				devel: true
@@ -21,7 +18,7 @@ module.exports = function(grunt) {
 				Zepto: true,
 				module: true
 			}
-		},*/
+		},
 		uglify: {
 			options: {
 				banner: [
@@ -40,44 +37,27 @@ module.exports = function(grunt) {
 				dest: 'dist/jquery.<%= pkg.name %>.min.js'
 			}
 		},
+		clean: ['dist'],
 		copy: {
 			main: {
-				files: {
-					"dist/" : ['src/**']
-				}
-			}
-		},
-		concat: {
-			options: {
-				stripBanners: true,
-				banner: [
-					'/**',
-					'	jQuery Plugin .stripe( options )',
-					'	@version  : <%= pkg.version %>',
-					'	@author   : Bruce Thomas',
-					'	@requires : jquery<%= pkg.dependencies.jquery %>',
-					'	@github   : <%= pkg.docs %>',
-					'*/',
-					''
-				].join('\n')
-			},
-			dist: {
-				src: 'src/jquery.<%= pkg.name %>.js',
-				dest: 'dist/jquery.<%= pkg.name %>.js'
+				files: [
+					{
+						cwd: 'src/',
+						expand: true,
+						src: ['**'],
+						dest: 'dist/'
+					}
+				]
 			}
 		}
 	});
 
-	//grunt.loadTasks('tasks');
-
-	// Load the plugin that provides the "uglify" task.
-	grunt.loadNpmTasks('grunt-contrib-uglify');
-	grunt.loadNpmTasks('grunt-contrib-concat');
+	grunt.loadNpmTasks('grunt-contrib-clean');
 	grunt.loadNpmTasks('grunt-contrib-copy');
-	//grunt.loadNpmTasks('grunt-contrib-jshint');
+	grunt.loadNpmTasks('grunt-contrib-jshint');
+	grunt.loadNpmTasks('grunt-contrib-uglify');
 
 	// Default task(s).
-	//grunt.registerTask('default', ['jshint', 'concat','uglify']);
-	grunt.registerTask('default', ['copy', 'concat','uglify']);
+	grunt.registerTask('default', ['jshint','clean','copy','uglify']);
 
 };

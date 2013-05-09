@@ -1,0 +1,12 @@
+{
+  "name": "jQueryStripe",
+  "version": "1.0.0",
+  "description": "A jQuery plug-in to create a cool striped gallery object",
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-contrib-uglify": "~0.2.0",
+    "grunt-contrib-copy": "~0.4.1",
+    "grunt-contrib-jshint": "~0.4.3",
+    "grunt-contrib-clean": "~0.4.1"
+  }
+}
