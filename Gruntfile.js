@@ -9,9 +9,6 @@ module.exports = function(grunt) {
 				browser: true,
 				bitwise: true,
 				eqeqeq: true,
-				passfail: false,
-				nomen: false,
-				plusplus: false,
 				undef: true,
 				evil: true,
 				devel: true
