@@ -3,7 +3,7 @@ module.exports = function(grunt) {
 	// Project configuration.
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('stripe.jquery.json'),
-		/*jshint: {
+		jshint: {
 			all: ['src/*.js'],
 			options: {
 				browser: true,
@@ -21,7 +21,7 @@ module.exports = function(grunt) {
 				Zepto: true,
 				module: true
 			}
-		},*/
+		},
 		uglify: {
 			options: {
 				banner: [
@@ -74,10 +74,10 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-uglify');
 	grunt.loadNpmTasks('grunt-contrib-concat');
 	grunt.loadNpmTasks('grunt-contrib-copy');
-	//grunt.loadNpmTasks('grunt-contrib-jshint');
+	grunt.loadNpmTasks('grunt-contrib-jshint');
 
 	// Default task(s).
-	//grunt.registerTask('default', ['jshint', 'concat','uglify']);
-	grunt.registerTask('default', ['copy', 'concat','uglify']);
+	grunt.registerTask('default', ['jshint', 'concat','uglify']);
+	//grunt.registerTask('default', ['copy', 'concat','uglify']);
 
 };
