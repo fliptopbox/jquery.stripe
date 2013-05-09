@@ -37,11 +37,17 @@ module.exports = function(grunt) {
 				dest: 'dist/jquery.<%= pkg.name %>.min.js'
 			}
 		},
+		clean: ['dist'],
 		copy: {
 			main: {
-				files: {
-					"dist/" : ['src/**']
-				}
+				files: [
+					{
+						cwd: 'src/',
+						expand: true,
+						src: ['**'],
+						dest: 'dist/'
+					}
+				]
 			}
 		},
 		concat: {
@@ -59,7 +65,7 @@ module.exports = function(grunt) {
 				].join('\n')
 			},
 			dist: {
-				src: 'src/jquery.<%= pkg.name %>.js',
+				src: 'dist/jquery.<%= pkg.name %>.js',
 				dest: 'dist/jquery.<%= pkg.name %>.js'
 			}
 		}
@@ -68,13 +74,14 @@ module.exports = function(grunt) {
 	//grunt.loadTasks('tasks');
 
 	// Load the plugin that provides the "uglify" task.
-	grunt.loadNpmTasks('grunt-contrib-uglify');
-	grunt.loadNpmTasks('grunt-contrib-concat');
+	grunt.loadNpmTasks('grunt-contrib-clean');
 	grunt.loadNpmTasks('grunt-contrib-copy');
 	grunt.loadNpmTasks('grunt-contrib-jshint');
+	grunt.loadNpmTasks('grunt-contrib-concat');
+	grunt.loadNpmTasks('grunt-contrib-uglify');
 
 	// Default task(s).
-	grunt.registerTask('default', ['jshint', 'concat','uglify']);
+	grunt.registerTask('default', ['jshint','clean','copy','uglify']);
 	//grunt.registerTask('default', ['copy', 'concat','uglify']);
 
 };
