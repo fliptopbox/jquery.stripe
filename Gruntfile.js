@@ -4,7 +4,7 @@ module.exports = function(grunt) {
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('stripe.jquery.json'),
 		jshint: {
-			all: ['src/*.js'],
+			all: ['src/*.js', '!src/jquery-1.7.1.min.js'],
 			options: {
 				browser: true,
 				bitwise: true,
