@@ -153,8 +153,6 @@
 		Stops the automatic slideshow
 	*/
 	Stripe.prototype.enter = function () {
-		console.log('enter')
-		// need a better way of passing in the stripe object :/
 		clearTimeout(this.timeout);
 		this.timeout = null;
 	};
@@ -257,7 +255,7 @@
 			return index !== that.current ? that.getImage(index) : that.current;
 		});
 
-		this.container.on('mouseenter', function (){this.enter.apply(this)}).on('mouseleave', function(){this.exit.apply(this)});
+		this.container.on('mouseenter', function (){that.enter.apply(that)}).on('mouseleave', function(){that.exit.apply(that)});
 	};
 
 	// Create the plugin
