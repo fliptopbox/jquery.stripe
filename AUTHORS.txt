@@ -15,6 +15,7 @@
   M A I N   D E V E L O P E R S :
  ----------------------------------------------------------------------
   Bruce Thomas         <response dot write at gmail dot com>
+  Aaron Faber          <aaron dot jack dot faber at gmail dot com>
 
 
   C O N T R I B U T O R S :
