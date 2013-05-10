@@ -61,7 +61,9 @@
 		this.init();
 	}
 
-
+	/**
+		Loops through the stripe gallery
+	*/
 	Stripe.prototype.auto = function () {
 		var that = this;
 
@@ -199,7 +201,11 @@
 			return isnext ? that.next() : that.previous();
 			// return that[nav]();
 		});
-		ctrl.on('mouseenter', function(){that.enter.apply(that)}).on('mouseleave', function (){that.exit.apply(that)});
+		ctrl.on('mouseenter', function(){
+			that.enter.apply(that);
+		}).on('mouseleave', function (){
+			that.exit.apply(that);
+		});
 	};
 
 	/**
@@ -226,6 +232,10 @@
 		this.auto();
 	};
 
+
+	/**
+		Sets up the gallery
+	*/
 	Stripe.prototype.init = function () {
 		var that = this;
 
@@ -255,7 +265,11 @@
 			return index !== that.current ? that.getImage(index) : that.current;
 		});
 
-		this.container.on('mouseenter', function (){that.enter.apply(that)}).on('mouseleave', function(){that.exit.apply(that)});
+		this.container.on('mouseenter', function (){
+			that.enter.apply(that);
+		}).on('mouseleave', function(){
+			that.exit.apply(that);
+		});
 	};
 
 	// Create the plugin
